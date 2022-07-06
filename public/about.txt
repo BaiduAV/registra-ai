@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Radio Canada
+- Font Author: Copyright 2017 The Radio-Canada Project Authors (https://github.com/cbcrc/radiocanadafonts)
+- Font Source: http://fonts.gstatic.com/s/radiocanada/v14/XRX13ISXn0dBMcibU6jlAqr3ejLv5OLZYiYXik6db2P4jxxlsls-0nFMkQPIJOdSSfOT.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
