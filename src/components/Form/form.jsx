@@ -16,10 +16,11 @@ import {
 	useToast
 } from '@chakra-ui/react';
 import {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import {ViewIcon, ViewOffIcon} from '@chakra-ui/icons';
-import {service} from '../../services/service'
 import {Field, Form, Formik} from 'formik';
 import * as yup from 'yup';
+import {service} from '../../services/service'
 
 const SignupSchema = yup.object().shape({
 	firstName: yup.string()
@@ -66,6 +67,7 @@ const FormSignUp = () => {
 		"siafi": ""
 	});
 	const toast = useToast()
+	const navigate = useNavigate();
 
 	const checkCep = async (e) => {
 		const cep = e.target.value;
@@ -92,21 +94,26 @@ const FormSignUp = () => {
 					minH={'100vh'}
 					align={'center'}
 					justify={'center'}>
-				<Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+				<Stack spacing={5} mx={'auto'} maxW={'lg'} py={4} px={6}>
+					<Box boxShadow={'lg'}
+					     p={6}
+					     rounded={'lg'}
+					     bg={useColorModeValue('white', 'gray.700')}>
+						<Stack align={'center'}>
+							<Heading fontSize={'4xl'} textAlign={'center'}>
+								Cadastre-se
+							</Heading>
+							<Text fontSize={'md'} color={'gray.600'}>
+								para acessar nossos recursos maneiros ✌️
+							</Text>
+						</Stack>
+					</Box>
 					<Box
 							rounded={'lg'}
 							bg={useColorModeValue('white', 'gray.700')}
 							boxShadow={'lg'}
 							p={8}>
 						<Stack spacing={4}>
-							<Stack align={'center'}>
-								<Heading fontSize={'4xl'} textAlign={'center'}>
-									Cadastre-se
-								</Heading>
-								<Text fontSize={'md'} color={'gray.600'}>
-									para acessar nossos recursos maneiros ✌️
-								</Text>
-							</Stack>
 							<Formik
 									initialValues={{
 										firstName: '',
@@ -124,8 +131,8 @@ const FormSignUp = () => {
 									validationSchema={SignupSchema}
 									enableReinitialize={true}
 									onSubmit={values => {
-										// same shape as initial values
 										console.log(values);
+										navigate('/success');
 									}}
 							>
 								{(props) => (
