@@ -6,10 +6,10 @@ Registra aí é uma plataforma para o registro de usuários.
 
 Para rodar a aplicação é necessário ter o Node>=16.16 e o yarn instalados.
 
-Uma vez com o repósitorio na maquina rode o comando 
+Uma vez com o repósitorio na maquina rode o comando em um terminal aberto na pasta do repositório.
 
 ```bash
-    yarn
+yarn
 ```
 
 Para instalar as dependências necessárias ao funcionamento do projeto.
@@ -17,7 +17,7 @@ Para instalar as dependências necessárias ao funcionamento do projeto.
 Depois é só rodar:
 
 ```bash
-    yarn start
+yarn start
 ```
 
 Para colocar o projeto em funcionamento.
